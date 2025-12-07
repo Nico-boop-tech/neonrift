@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Neon Rift – Lite</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="menu" class="overlay">
+        <h1>NEON RIFT – LITE</h1>
+        <button id="start">GIOCA</button>
+        <button id="tutorial">TUTORIAL</button>
+    </div>
+
+    <div id="tutorialPanel" class="overlay hidden">
+        <h2>TUTORIAL</h2>
+        <p>
+            A/D = Muovi<br>
+            SPACE = Salta<br>
+            SPACE x2 = Doppio salto<br>
+            SHIFT = Dash<br>
+            Raccogli i frammenti!
+        </p>
+        <button id="back">Indietro</button>
+    </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
