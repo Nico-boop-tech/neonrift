@@ -1,0 +1,10 @@
+body {
+    background:#0b0d1a;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+}
+.menu { margin-top:50px; }
+.hidden { display:none; }
+canvas { background:#111; margin-top:20px; border:2px solid #0ff; }
+button { padding:10px 20px; margin:5px; font-size:18px; }
