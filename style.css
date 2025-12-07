@@ -1,10 +1,8 @@
-body {
-    background:#0b0d1a;
-    color:white;
-    font-family:Arial;
-    text-align:center;
-}
-.menu { margin-top:50px; }
-.hidden { display:none; }
-canvas { background:#111; margin-top:20px; border:2px solid #0ff; }
-button { padding:10px 20px; margin:5px; font-size:18px; }
+*{box-sizing:border-box}
+body{margin:0;background:#051018;font-family:Arial;color:#eaf6ff;display:flex;align-items:center;justify-content:center;height:100vh}
+#container{position:relative}
+canvas{display:block;background:linear-gradient(180deg,#041423,#07111a);border-radius:6px;border:4px solid rgba(0,230,255,0.06)}
+.overlay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(3,6,10,0.9);padding:18px;border-radius:10px;text-align:center;width:380px}
+.hidden{display:none}
+.buttons button{display:block;width:70%;margin:8px auto;padding:10px;background:linear-gradient(90deg,#00e6ff,#ff46b3);border:none;border-radius:8px;color:#041018;font-weight:700;cursor:pointer}
+label{font-size:16px}

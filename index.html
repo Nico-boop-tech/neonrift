@@ -1,37 +1,41 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="it">
 <head>
-<meta charset="UTF-8">
-<title>Neon Rift</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Neon Rift - Online</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="mainMenu" class="menu">
-<h1>NEON RIFT</h1>
-<button id="btnPlay">Gioca</button>
-<button id="btnTutorial">Tutorial</button>
-<button id="btnSettings">Impostazioni</button>
+<div id="container">
+  <canvas id="game" width="960" height="540"></canvas>
+  <div id="ui">
+    <div id="menu" class="overlay">
+      <h1>NEON RIFT</h1>
+      <div class="buttons">
+        <button id="play">Gioca</button>
+        <button id="tutorial">Tutorial</button>
+        <button id="settings">Impostazioni</button>
+      </div>
+    </div>
+    <div id="settingsPanel" class="overlay hidden">
+      <h2>Impostazioni</h2>
+      <label><input type="checkbox" id="musicToggle" checked> Musica</label><br/>
+      <button id="backFromSettings">Indietro</button>
+    </div>
+    <div id="tutorialPanel" class="overlay hidden">
+      <h2>Tutorial</h2>
+      <p>Usa A/D per muoverti, SPACE per salto (premi di nuovo in aria per doppio salto), SHIFT per dash.</p>
+      <button id="backFromTut">Indietro</button>
+    </div>
+  </div>
 </div>
 
-<div id="settingsMenu" class="menu hidden">
-<h2>Impostazioni</h2>
-<label><input type="checkbox" id="musicToggle" checked> Musica</label><br><br>
-<button id="btnBack">Indietro</button>
-</div>
-
-<div id="tutorial" class="menu hidden">
-<h2>Tutorial</h2>
-<p>Movimento: A / D<br>Salto: SPACE<br>Doppio salto: SPACE di nuovo in aria<br>Dash: SHIFT</p>
-<button id="btnBack2">Indietro</button>
-</div>
-
-<canvas id="gameCanvas" width="800" height="450" class="hidden"></canvas>
-
-<audio id="musicLoop" src="assets/ambient.wav" loop></audio>
-<audio id="sfxJump" src="assets/jump.wav"></audio>
-<audio id="sfxDouble" src="assets/double.wav"></audio>
-<audio id="sfxDash" src="assets/dash.wav"></audio>
-<audio id="sfxCollect" src="assets/collect.wav"></audio>
+<audio id="music" src="assets/ambient_loop.wav" loop preload="auto"></audio>
+<audio id="sfxJump" src="assets/jump.wav" preload="auto"></audio>
+<audio id="sfxDouble" src="assets/double_jump.wav" preload="auto"></audio>
+<audio id="sfxDash" src="assets/dash.wav" preload="auto"></audio>
+<audio id="sfxCollect" src="assets/collect.wav" preload="auto"></audio>
 
 <script src="game.js"></script>
 </body>
